@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo5_componets/pages/avatar_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
@@ -49,18 +50,13 @@ class HomePage extends StatelessWidget {
                   thickness: 0.45,
                 ),
               ),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
-              ItemComponentWidget(),
+              ItemComponentWidget(
+                title: "Avatar",
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AvatarPage(),));
+                },
+              ),
+
             ],
           ),
         ),
@@ -70,9 +66,13 @@ class HomePage extends StatelessWidget {
 }
 
 class ItemComponentWidget extends StatelessWidget {
-  const ItemComponentWidget({
-    Key? key,
-  }) : super(key: key);
+  String title;
+  Function onTap;
+
+  ItemComponentWidget({
+  required this.title,
+  required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -90,12 +90,15 @@ class ItemComponentWidget extends StatelessWidget {
         ],
       ),
       child: ListTile(
+        onTap:() {
+          onTap();
+        },
         leading: Icon(
             Icons.check_circle_outline,
             color: Color(0xff4a5467),
         ),
-        title: Text("Avatar"),
-        subtitle: Text("Ir al detalle de avatar",
+        title: Text(title),
+        subtitle: Text("Ir a detalle de $title",
         style: GoogleFonts.poppins(
           fontSize: 13.0,
           ),
