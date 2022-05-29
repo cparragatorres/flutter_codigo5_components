@@ -8,10 +8,10 @@ class AvatarPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Avatar Page"),
-        centerTitle: true,
+        centerTitle: false,
         elevation: 0,
         backgroundColor: Colors.deepPurple,
-        actions: [
+        actions: const [
           CircleAvatar(
             backgroundColor: Colors.white,
             child: Text(
@@ -23,11 +23,30 @@ class AvatarPage extends StatelessWidget {
               ),
             ),
           ),
-          Icon(
-              Icons.search
+          SizedBox(
+            width: 10.0,
           ),
+          CircleAvatar(
+            backgroundImage: NetworkImage(
+              "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            ),
+          ),
+          Icon(Icons.search),
           Icon(
             Icons.more_vert,
+          ),
+        ],
+      ),
+      body: Column(
+        children: const [
+          FadeInImage(
+            fadeInDuration: Duration(milliseconds: 2000),
+            placeholder: AssetImage(
+              "assets/images/loading.gif",
+            ),
+            image: NetworkImage(
+              "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            ),
           ),
         ],
       ),

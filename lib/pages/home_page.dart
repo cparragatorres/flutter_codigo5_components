@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_codigo5_componets/pages/alert_page.dart';
 import 'package:flutter_codigo5_componets/pages/avatar_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Container(
@@ -23,18 +24,18 @@ class HomePage extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.12),
-                      offset: Offset(4.0, 4.0),
+                      offset: const Offset(4.0, 4.0),
                       blurRadius: 12.0,
                     ),
                   ],
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: NetworkImage(
                       "https://malditopaparazzo.com.ar/wp-content/uploads/2021/05/David-Chicle.jpg",
                     ),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10.0,
               ),
               Text(
@@ -54,7 +55,10 @@ class HomePage extends StatelessWidget {
                 title: "Avatar",
                 toPage: AvatarPage(),
               ),
-
+              ItemComponentWidget(
+                title: "Alert",
+                toPage: AlertPage(),
+              ),
             ],
           ),
         ),
