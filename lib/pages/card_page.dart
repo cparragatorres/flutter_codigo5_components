@@ -54,7 +54,8 @@ class CardPage extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 12.0),
-                  margin: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 6.0),
+                  margin: const EdgeInsets.symmetric(
+                      vertical: 12.0, horizontal: 6.0),
                   width: double.infinity,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
@@ -81,12 +82,22 @@ class CardPage extends StatelessWidget {
           ),
 
           //Card 2
-          SizedBox(
-            height: 20.0,
-          ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
-            color: Colors.white,
+            margin:
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 28.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.07),
+                  offset: Offset(4, 4),
+                  blurRadius: 12.0,
+                ),
+              ],
+            ),
             child: Row(
               children: [
                 Image.asset(
@@ -96,22 +107,23 @@ class CardPage extends StatelessWidget {
                 Expanded(
                   child: Column(
                     children: [
-                      Text("Fiorella Guadalupe de las Nievees Azules",
-                      style: GoogleFonts.montserrat(
-                        color: Colors.black.withOpacity(0.7),
-                        fontSize: 16.0,
+                      Text(
+                        "Fiorella Guadalupe de las Nievees Azules",
+                        style: GoogleFonts.montserrat(
+                          color: Colors.black.withOpacity(0.7),
+                          fontSize: 16.0,
                         ),
                       ),
                       SizedBox(
                         height: 6.0,
                       ),
-                      Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                      style: GoogleFonts.montserrat(
-                        color: Colors.black.withOpacity(0.6),
-                        fontSize: 13.0
-                      ),
+                      Text(
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        style: GoogleFonts.montserrat(
+                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 13.0),
                       ),
                     ],
                   ),
@@ -120,6 +132,28 @@ class CardPage extends StatelessWidget {
             ),
           ),
 
+          //Card 3
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 12.0),
+            color: Colors.lightBlueAccent,
+            child: Row(
+              children: [
+                Image.network(
+                  "https://images.pexels.com/photos/378006/pexels-photo-378006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                  height: 130,
+                  width: 130,
+                  fit: BoxFit.fitWidth,
+                ),
+                Expanded(
+                  child: Text(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    maxLines: 5,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
