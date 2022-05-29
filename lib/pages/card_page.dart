@@ -134,15 +134,25 @@ class CardPage extends StatelessWidget {
 
           //Card 3
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 12.0),
-            color: Colors.lightBlueAccent,
+            margin:
+                const EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
+            decoration: BoxDecoration(
+              color: Colors.lightBlueAccent,
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             child: Row(
               children: [
-                Image.network(
-                  "https://images.pexels.com/photos/378006/pexels-photo-378006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                  height: 130,
-                  width: 130,
-                  fit: BoxFit.fitWidth,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12.0),
+                  child: Image.network(
+                    "https://images.pexels.com/photos/378006/pexels-photo-378006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    height: 130,
+                    width: 130,
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                const SizedBox(
+                  width: 8.0,
                 ),
                 Expanded(
                   child: Text(
