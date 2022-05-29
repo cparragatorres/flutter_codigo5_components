@@ -13,6 +13,7 @@ class CardPage extends StatelessWidget {
       ),
       body: Column(
         children: [
+          //Card 1
           Container(
             margin:
                 const EdgeInsets.symmetric(horizontal: 12.0, vertical: 14.0),
@@ -78,6 +79,47 @@ class CardPage extends StatelessWidget {
               ],
             ),
           ),
+
+          //Card 2
+          SizedBox(
+            height: 20.0,
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
+            color: Colors.white,
+            child: Row(
+              children: [
+                Image.asset(
+                  "assets/images/item1.png",
+                  height: 120.0,
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Text("Fiorella Guadalupe de las Nievees Azules",
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black.withOpacity(0.7),
+                        fontSize: 16.0,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6.0,
+                      ),
+                      Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black.withOpacity(0.6),
+                        fontSize: 13.0
+                      ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
         ],
       ),
     );
