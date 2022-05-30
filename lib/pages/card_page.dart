@@ -137,11 +137,29 @@ class CardPage extends StatelessWidget {
             margin:
                 const EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
             decoration: BoxDecoration(
-              color: Colors.lightBlueAccent,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(12.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.06),
+                ),
+              ],
             ),
             child: Row(
               children: [
+                const SizedBox(
+                  width: 8.0,
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                      maxLines: 7,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
                   child: Image.network(
@@ -149,16 +167,6 @@ class CardPage extends StatelessWidget {
                     height: 130,
                     width: 130,
                     fit: BoxFit.fitWidth,
-                  ),
-                ),
-                const SizedBox(
-                  width: 8.0,
-                ),
-                Expanded(
-                  child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-                    maxLines: 5,
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ],

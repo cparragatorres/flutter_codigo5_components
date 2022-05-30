@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_componets/pages/alert_page.dart';
 import 'package:flutter_codigo5_componets/pages/avatar_page.dart';
+import 'package:flutter_codigo5_componets/pages/card2_page.dart';
 import 'package:flutter_codigo5_componets/pages/card_page.dart';
+import 'package:flutter_codigo5_componets/pages/reto_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
@@ -63,6 +65,14 @@ class HomePage extends StatelessWidget {
               ItemComponentWidget(
                 title: "Cards",
                 toPage: CardPage(),
+              ),
+              ItemComponentWidget(
+                title: "Cards 2",
+                toPage: CardPage2(),
+              ),
+              ItemComponentWidget(
+                title: "Dr. Peterson",
+                toPage: RetoPage(),
               ),
             ],
           ),
