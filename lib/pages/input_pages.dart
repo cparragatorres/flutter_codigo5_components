@@ -198,7 +198,7 @@ class _InputPageState extends State<InputPage> {
               ),
               const SizedBox(height: 30.0),
               TextField(
-                controller: ,
+                controller: _dateTimeController,
                 toolbarOptions: ToolbarOptions(
                   copy: false,
                   cut: false,
