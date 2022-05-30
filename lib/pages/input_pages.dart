@@ -31,11 +31,17 @@ class InputPage extends StatelessWidget {
                   label: Text("correo electrónico"),
                   hintText: "example@gmail.com",
                   hintStyle: TextStyle(
-                    color: Colors.pinkAccent.withOpacity(0.35),
+                    color: Colors.black.withOpacity(0.35),
                     fontWeight: FontWeight.w400,
                     fontSize: 16.0,
                   ),
+                  icon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.alternate_email),
+                  suffixIcon: Icon(Icons.email_outlined,color: Colors.purpleAccent),
                 ),
+                onChanged: (String value){
+                  print(value);
+                },
               ),
             ],
           ),
