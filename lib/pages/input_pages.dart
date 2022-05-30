@@ -215,6 +215,32 @@ class _InputPageState extends State<InputPage> {
                   selectDate();
                 },
               ),
+              const SizedBox(height: 30.0),
+              DropdownButton(
+                items: [
+                  DropdownMenuItem(
+                    value: "A",
+                    child: Text(
+                      "Hola",
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: "B",
+                    child: Text(
+                        "Buenos dias",
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: "C",
+                    child: Text(
+                        "Buenas noches",
+                    ),
+                  ),
+                ],
+                onChanged: (value) {
+                  print(value);
+                },
+              ),
               const SizedBox(height: 100.0),
             ],
           ),
@@ -234,11 +260,9 @@ class _InputPageState extends State<InputPage> {
       firstDate: DateTime(2020),
       lastDate: DateTime(2030),
     );
-    if(dateSelected != null){
-      _dateTimeController.text=dateSelected.toString();
-      setState(() {
-
-      });
+    if (dateSelected != null) {
+      _dateTimeController.text = dateSelected.toString().substring(0, 10);
+      setState(() {});
     }
   }
 }
