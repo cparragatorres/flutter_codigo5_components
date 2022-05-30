@@ -14,6 +14,8 @@ class _InputPageState extends State<InputPage> {
       TextEditingController(text: "Ramón Juan");
   TextEditingController _dateTimeController = TextEditingController();
 
+  String valueAux = "A";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -217,6 +219,7 @@ class _InputPageState extends State<InputPage> {
               ),
               const SizedBox(height: 30.0),
               DropdownButton(
+                value: valueAux,
                 items: [
                   DropdownMenuItem(
                     value: "A",
@@ -238,7 +241,8 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ],
                 onChanged: (value) {
-                  print(value);
+                  valueAux = value.toString();
+                  setState((){});
                 },
               ),
               const SizedBox(height: 100.0),
