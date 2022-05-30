@@ -8,7 +8,7 @@ class InputPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("InputPage"),
+        title: const Text("InputPage"),
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
@@ -22,7 +22,8 @@ class InputPage extends StatelessWidget {
                 textAlign: TextAlign.start,
                 maxLength: 20,
                 cursorColor: Colors.deepPurpleAccent,
-                style: TextStyle(
+                style:
+                const TextStyle(
                   color: Colors.deepPurpleAccent,
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -43,8 +44,8 @@ class InputPage extends StatelessWidget {
                   print(value);
                 },
               ),
-              SizedBox(height: 20.0),
-              TextField(
+              const SizedBox(height: 20.0),
+              const TextField(
                 decoration: InputDecoration(
                   hintText: "Buscar producto",
                   prefixIcon: Icon(Icons.search),
@@ -67,6 +68,29 @@ class InputPage extends StatelessWidget {
                       width: 4.0,
                     ),
                   )
+                ),
+              ),
+              const SizedBox(height: 30.0),
+              TextField(
+                decoration: InputDecoration(
+                  icon: Icon(Icons.search),
+                  suffixIcon: Icon(Icons.check_circle_outline),
+                  label: Text("Buscar"),
+                  hintText: "Ingresa el producto a buscar...",
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 2.0,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      width: 2.0,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
                 ),
               ),
             ],
