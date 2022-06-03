@@ -15,6 +15,11 @@ class _InputPageState extends State<InputPage> {
   TextEditingController _dateTimeController = TextEditingController();
 
   String valueAux = "A";
+  List<String> superheroes = [
+    "Superman",
+    "Wonder Woman",
+    "Batman"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -224,7 +229,7 @@ class _InputPageState extends State<InputPage> {
                   DropdownMenuItem(
                     value: "A",
                     child: Text(
-                      "Hola",
+                      superheroes[0],
                     ),
                   ),
                   DropdownMenuItem(
