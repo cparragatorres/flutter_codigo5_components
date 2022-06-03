@@ -228,7 +228,7 @@ class _InputPageState extends State<InputPage> {
               const SizedBox(height: 30.0),
               DropdownButton(
                 value: valueAux,
-                items: getDataSuperheroe(),
+                items: superheroes.map((e) => DropdownMenuItem(child: Text(e), value: e,)).toList(),
                 onChanged: (String? value){
                   valueAux = value!;
                   setState((){});
