@@ -228,10 +228,15 @@ class _InputPageState extends State<InputPage> {
               const SizedBox(height: 30.0),
               DropdownButton(
                 value: valueAux,
-                items: superheroes.map((e) => DropdownMenuItem(child: Text(e), value: e,)).toList(),
-                onChanged: (String? value){
+                items: superheroes
+                    .map((e) => DropdownMenuItem(
+                          child: Text(e),
+                          value: e,
+                        ))
+                    .toList(),
+                onChanged: (String? value) {
                   valueAux = value!;
-                  setState((){});
+                  setState(() {});
                 },
               ),
               const SizedBox(height: 100.0),
@@ -258,7 +263,8 @@ class _InputPageState extends State<InputPage> {
       setState(() {});
     }
   }
-  List<DropdownMenuItem<String>> getDataSuperheroe(){
+
+  List<DropdownMenuItem<String>> getDataSuperheroe() {
     List<DropdownMenuItem<String>> items = [];
     superheroes.forEach((element) {
       items.add(
@@ -270,7 +276,4 @@ class _InputPageState extends State<InputPage> {
     });
     return items;
   }
-
-
-
 }
