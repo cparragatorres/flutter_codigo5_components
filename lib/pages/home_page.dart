@@ -4,6 +4,7 @@ import 'package:flutter_codigo5_componets/pages/avatar_page.dart';
 import 'package:flutter_codigo5_componets/pages/card2_page.dart';
 import 'package:flutter_codigo5_componets/pages/card_page.dart';
 import 'package:flutter_codigo5_componets/pages/input_pages.dart';
+import 'package:flutter_codigo5_componets/pages/list_page.dart';
 import 'package:flutter_codigo5_componets/pages/reto_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -78,6 +79,10 @@ class HomePage extends StatelessWidget {
               ItemComponentWidget(
                 title: "Inputs",
                 toPage: InputPage(),
+              ),
+              ItemComponentWidget(
+                title: "Lists",
+                toPage: ListPage(),
               ),
             ],
           ),
