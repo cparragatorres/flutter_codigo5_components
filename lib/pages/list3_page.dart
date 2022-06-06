@@ -11,7 +11,7 @@ class List3Page extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView.builder(
-        itemCount: 5,
+        itemCount: 12,
         itemBuilder: (BuildContext context, int index) {
           return Container(
             margin: const EdgeInsets.all(10.0),
@@ -35,7 +35,7 @@ class List3Page extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
                     child: Image.network(
-                      "https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                      "https://picsum.photos/500/500/?image=$index",
                       height: 60,
                       width: 60,
                       fit: BoxFit.cover,
@@ -91,7 +91,8 @@ class List3Page extends StatelessWidget {
                           SizedBox(
                             width: 3.0,
                           ),
-                          Text("Completed",
+                          Text(
+                            "Completed",
                             style: GoogleFonts.montserrat(
                               color: Color(0xff3FC2A3),
                               fontWeight: FontWeight.w400,
