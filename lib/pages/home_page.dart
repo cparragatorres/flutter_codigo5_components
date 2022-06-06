@@ -8,6 +8,8 @@ import 'package:flutter_codigo5_componets/pages/list_page.dart';
 import 'package:flutter_codigo5_componets/pages/reto_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'grid_page.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -83,6 +85,10 @@ class HomePage extends StatelessWidget {
               ItemComponentWidget(
                 title: "Lists",
                 toPage: ListPage(),
+              ),
+              ItemComponentWidget(
+                title: "Grid",
+                toPage: GridPage(),
               ),
             ],
           ),
