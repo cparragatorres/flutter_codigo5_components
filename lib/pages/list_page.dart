@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'home_page.dart';
 import 'list1_page.dart';
 import 'list2_page.dart';
+import 'list3_page.dart';
 
 class ListPage extends StatefulWidget {
 
@@ -29,6 +30,10 @@ class _ListPageState extends State<ListPage> {
           ItemComponentWidget(
             title: "List2",
             toPage: List2Page(),
+          ),
+          ItemComponentWidget(
+            title: "List3",
+            toPage: List3Page(),
           ),
         ],
       ),
