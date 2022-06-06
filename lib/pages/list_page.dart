@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ListPage extends StatelessWidget {
+import 'home_page.dart';
+import 'list1_page.dart';
+import 'list2_page.dart';
 
-  List<String> superheroes =[
-    "Superman",
-    "Batman",
-    "Wonder Woman",
-    "Flash",
-    "Aquaman"
-  ];
+class ListPage extends StatefulWidget {
+
+  @override
+  State<ListPage> createState() => _ListPageState();
+}
+
+class _ListPageState extends State<ListPage> {
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +20,19 @@ class ListPage extends StatelessWidget {
         title: Text("ListPage"),
         centerTitle: true,
       ),
-      body: ListView.builder(
-          itemCount: superheroes.length,
-          itemBuilder: (BuildContext context, int index){
-            print(index);
-            return Text(superheroes[index]);
-          }
+      body: Column(
+        children: [
+          ItemComponentWidget(
+            title: "List1",
+            toPage: List1Page(),
+          ),
+          ItemComponentWidget(
+            title: "List2",
+            toPage: List2Page(),
+          ),
+        ],
       ),
+
     );
   }
 }
