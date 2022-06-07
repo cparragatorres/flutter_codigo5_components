@@ -5,9 +5,7 @@ import 'package:flutter_codigo5_componets/pages/calendar-input_page.dart';
 import 'package:flutter_codigo5_componets/pages/dropdown_page.dart';
 import 'package:flutter_codigo5_componets/pages/general_Inputs_page.dart';
 import 'package:flutter_codigo5_componets/pages/home_page.dart';
-import 'package:flutter_codigo5_componets/pages/list_page.dart';
 import 'package:flutter_codigo5_componets/pages/password_Inputs_pages.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class InputPage extends StatefulWidget {
   @override

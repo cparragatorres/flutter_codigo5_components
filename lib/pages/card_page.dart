@@ -176,6 +176,4 @@ class CardPage extends StatelessWidget {
       ),
     );
   }
-
-  const CardPage({Key? key}) : super(key: key);
 }
