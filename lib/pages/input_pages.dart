@@ -42,10 +42,6 @@ class _InputPageState extends State<InputPage> {
                 toPage: PasswordInputPages(),
               ),
               ItemComponentWidget(
-                title: "Password-Inputs",
-                toPage: PasswordInputPages(),
-              ),
-              ItemComponentWidget(
                 title: "CapturarValoresDelInput",
                 toPage: CapturarValoresDelInputPage(),
               ),

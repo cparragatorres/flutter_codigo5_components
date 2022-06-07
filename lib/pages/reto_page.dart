@@ -162,17 +162,13 @@ class RetoPage extends StatelessWidget {
                                 children: [
                                   Row(
                                     children: [
-
-                                      Container(
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(20.0),
-                                          child: Image.asset(
-                                            "profile.jpeg",
-                                            height: 50.0,
-                                            width: 50.0,
-                                            fit: BoxFit.fitHeight,
-                                          ),
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(10.0),
+                                        child: Image.network(
+                                          "https://picsum.photos/500/500/?image=1",
+                                          height: 60,
+                                          width: 60,
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                       SizedBox(
